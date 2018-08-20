@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <title>Insert title here</title>
 </head>
 <body>
-    Hello,${name}
+<font size="7" color="green">${name}</font>
 </body>
 </html>

@@ -30,9 +30,9 @@ public class TestController {
   }
 
   @RequestMapping("/")
-  @ResponseBody
-  public Object a() {
-    return "Hello,科大学子";
+  public String a(ModelMap map) {
+    map.put("name", "Hello,科大学子");
+    return "success";
   }
 
 }
