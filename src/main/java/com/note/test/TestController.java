@@ -3,10 +3,11 @@ package com.note.test;
 import com.note.po.Student;
 import com.note.repository.StudentRepository;
 import com.note.vo.User;
+import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,21 +23,31 @@ public class TestController {
   }
 
   @RequestMapping(value = "/login/confirm", method = RequestMethod.POST)
-  public String confirmLogin(User user) {
-    return "login";
+  public String confirmLogin(User user, ModelMap map) {
+    List<Student> students = studentRepository.findAll();
+    map.put("students", students);
+    return "redirect:/show";
   }
 
-  @RequestMapping("/show/{id}")
-  public String show(ModelMap map, @PathVariable(value = "id") Integer id) {
-    Student one = studentRepository.findOne(id);
-    map.put("name", one == null ? "无" : one.getName());
-    return "success";
+  @RequestMapping("/show")
+  public String show(ModelMap map) {
+    List<Student> students = studentRepository.findAll();
+    map.put("students", students);
+    return "show";
   }
 
   @RequestMapping("/")
   public String a(ModelMap map) {
     map.put("name", "Hello,科大学子");
     return "success";
+  }
+
+  @RequestMapping(value = "/add", method = RequestMethod.POST)
+  public String add(User user) {
+    Student s = new Student();
+    s.setName(user.getUsername());
+    studentRepository.save(s);
+    return "redirect:/show";
   }
 
 }
