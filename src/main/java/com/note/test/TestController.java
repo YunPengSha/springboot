@@ -38,8 +38,7 @@ public class TestController {
 
   @RequestMapping("/")
   public String a(ModelMap map) {
-    map.put("name", "Hello,科大学子");
-    return "success";
+    return "login";
   }
 
   @RequestMapping(value = "/add", method = RequestMethod.POST)

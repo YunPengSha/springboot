@@ -18,6 +18,7 @@
   </style>
 </head>
 <body>
+<div>
 <table style="text-align:center;FONT-SIZE: 11pt; WIDTH: 600px; FONT-FAMILY: 宋体; BORDER-COLLAPSE: collapse" borderColor=#3399ff cellSpacing=0 cellPadding=0 align=center border=1>
   <tr>
     <td><b>id</b></td>
@@ -30,8 +31,7 @@
     </tr>
     </#list>
 </table>
-<div class="divForm">
-  <form name="addform" action="/add" method="post">
+  <form name="addform" style="text-align:center" action="/add" method="post">
     Username: <input type="text" name="username" size="40" maxlength="80">
     <input type="submit" value="新增" onclick="return validateLogin()">
   </form>
