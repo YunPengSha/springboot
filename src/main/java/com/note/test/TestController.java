@@ -2,13 +2,13 @@ package com.note.test;
 
 import com.note.po.Student;
 import com.note.repository.StudentRepository;
+import com.note.vo.User;
 import javax.annotation.Resource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class TestController {
@@ -16,10 +16,14 @@ public class TestController {
   @Resource
   private StudentRepository studentRepository;
 
-  @RequestMapping("/test")
-  @ResponseBody
-  public Object test() {
-    return "success";
+  @RequestMapping("/login")
+  public String test() {
+    return "login";
+  }
+
+  @RequestMapping(value = "/login/confirm", method = RequestMethod.POST)
+  public String confirmLogin(User user) {
+    return "login";
   }
 
   @RequestMapping("/show/{id}")
