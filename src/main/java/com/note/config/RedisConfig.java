@@ -88,7 +88,7 @@ public class RedisConfig {
     //端口号
     jedisConnectionFactory.setPort(6379);
     //如果Redis设置有密码
-    //jedisConnectionFactory.setPassword(password);
+    jedisConnectionFactory.setPassword("sypboss");
     //客户端超时时间单位是毫秒
     jedisConnectionFactory.setTimeout(clientTimeOut);
     return jedisConnectionFactory;
