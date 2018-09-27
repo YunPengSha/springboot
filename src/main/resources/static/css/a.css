@@ -1,0 +1,16 @@
+body{
+  background-color: #ff6af2;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 5px dotted black;
+  padding: 10px 10px 10px 10px;
+  font-family: fantasy;
+  font-size: small;
+}
+p{
+  color: #abff56;
+}
+em{
+  color: #48b3ff;
+  font-size: 200%;
+}

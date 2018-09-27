@@ -1,0 +1,11 @@
+#be {
+  border-color: #abff56;
+  border-width: 5px;
+  border-style: outset;
+  background-color: bisque;
+  padding: 100px;
+  margin: 50px;
+  /*background-image: url(/picture/haizei.jpg);*/
+  border-radius: 10px;
+  width: 200px;
+}
