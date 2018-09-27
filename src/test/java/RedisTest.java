@@ -20,10 +20,10 @@ public class RedisTest {
   @Test
   public void contextLoads() {
     print(redisUtil.get("a"));
-//    boolean set = redisUtil.set("a", "abcde");
-//    if (set) {
-//      System.out.println("success");
-//    }
+    boolean set = redisUtil.set("a","KFC",60);
+    if (set) {
+      System.out.println("success");
+    }
   }
 
 
