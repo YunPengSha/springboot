@@ -15,9 +15,9 @@ public class LoginInterceptor implements HandlerInterceptor {
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
       Object handler) {
-    if (1 == 1) {
-      throw new ServiceException("我没权限");
-    }
+//    if (1 == 1) {
+//      throw new ServiceException("我没权限");
+//    }
     return true;
   }
 

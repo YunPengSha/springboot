@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TestController {
@@ -26,6 +27,13 @@ public class TestController {
     List<Student> students = studentRepository.findAll();
     map.put("students", students);
     return "redirect:/show";
+  }
+
+  @RequestMapping(value = "/get", method = RequestMethod.GET)
+  @ResponseBody
+  public Object asd(User user, ModelMap map) {
+    List<Student> students = studentRepository.findAll();
+    return students;
   }
 
   @RequestMapping("/show")
