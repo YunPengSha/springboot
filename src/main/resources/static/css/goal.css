@@ -1,0 +1,59 @@
+body {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  background: #ef605e url(../picture/dog.jpg) top left;
+  background-size: 100%, 100%;
+  margin: 20px;
+}
+
+.exit {
+  float: right;
+}
+
+div.main {
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  clear: both;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 100px 100px 0px 0px;
+}
+
+table {
+  margin-left: 20px;
+  margin-right: 20px;
+  border: thin solid black;
+  caption-side: top;
+  border-collapse: collapse;
+}
+
+table table th {
+  background-color: white;
+}
+
+td, th {
+  border: thin dotted gray;
+  padding: 15px;
+}
+
+th {
+  background-color: #cc6600;
+}
+
+.cellColor {
+  background-color: #fcba7a;
+}
+
+caption {
+  font-style: italic;
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+.center {
+  text-align: center;
+}
+
+
